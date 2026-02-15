@@ -82,31 +82,9 @@ d) Jaka praca jest wykonywana przez siłę działającą na cząstkę między pu
 
 ## 14. Dynamika IV
 
-Człowiek o masie $m$ stoi na podłodze urwanej windy spadającej z przyspieszeniem $a$. Wyznacz siłę nacisku, jaką wywiera on na podłogę windy.
-
-## 15. Dynamika V
-
-Wyjaśnij, dlaczego astronauta w statku kosmicznym z wyłączonymi silnikami znajduje się w stanie nieważkości.
-
-## 16. Dynamika VI
-
-Tramwaj składa się z dwóch wagonów o masach $m_1$ i $m_2$, z których tylko pierwszy posiada silnik. Siła tarcia działająca na koła wagonu silnikowego jest równa $T$. Z jaką siłą wagon silnikowy ciągnie drugi wagon?
-
-## 17. Dynamika VII
-
-W pociągu poruszającym się:
-
-a) ze stałą prędkością $v$;
-
-b) ze stałym przyspieszeniem $a$,
-
-na sznurku wisi masa $m$. Jakie jest odchylenie sznurka od pionu?
-
-## 18. Dynamika VIII
-
 Piłeczka pingpongowa traci ułamek $1/k$ swojej energii kinetycznej po uderzeniu o podłogę. Znajdź całkowitą drogę, jaką przebędzie piłeczka upuszczona z wysokości $h$, aż do momentu zatrzymania. Współczynnik $k>1$.
 
-## 19. Dynamika IX
+## 15. Dynamika V
 
 Kamień o masie $m$ rzucono z prędkością $v_0$ do studni, w której poziom wody znajduje się na głębokości $d$. Załóż, że kamień spada swobodnie w powietrzu, natomiast w wodzie działa na niego siła oporu proporcjonalna do prędkości:
 
@@ -116,11 +94,7 @@ $$
 
 Znajdź zależność położenia, prędkości i przyspieszenia kamienia od czasu.
 
-## 20. Dynamika X
-
-W ślad za kamieniem z poprzedniego zadania, po czasie $T$ rzucono do studni drugi kamień o tej samej masie i z taką samą prędkością. Jaka będzie zależność odległości $D$ między kamieniami od czasu?
-
-## 21. Dynamika XI
+## 16. Dynamika VI
 
 Piłkę o masie $m$ rzucono pionowo w górę z prędkością $v_0$. Siła oporu powietrza działająca na piłkę dana jest wzorem:
 
@@ -130,16 +104,6 @@ $$
 
 Znajdź równanie ruchu piłki, czas przelotu do najwyższego punktu toru oraz położenie tego punktu.
 
-## 22. Dynamika XII
+## 17. Dynamika VII
 
-Rozwiąż problem rzutu ukośnego w polu grawitacyjnym, gdy na poruszające się ciało działa siła oporu proporcjonalna do prędkości. Znajdź równania ruchu, maksymalną wysokość oraz czas jej osiągnięcia. Przedyskutuj przypadek, gdy siła oporu jest znacznie mniejsza od ciężaru ciała.
-
-## 23. Dynamika XIII
-
-Mała kulka o masie $m$ zsuwa się bez tarcia po powierzchni sfery o promieniu $R$. W jakim punkcie i z jaką prędkością kulka oderwie się od sfery?
-
-## 24. Dynamika XIV
-
-Znajdź rozwiązanie poprzedniego problemu w przypadku, gdy kulka startuje ze szczytu sfery z prędkością $v_0 \neq 0$.
-
-Uwaga. Przypadki $v_0 \le \sqrt{gR}$ oraz $v_0 > \sqrt{gR}$ należy rozpatrzyć oddzielnie.
+Rozwiąż problem ruchu pocisku w polu grawitacyjnym, gdy na poruszające się ciało działa siła oporu proporcjonalna do prędkości. Znajdź równania różniczkowe ruchu dla $x(t)$ i $y(t)$, rozwiąż je, a następnie znajdź maksymalną wysokość i czas do jej osiągnięcia. Omów przypadek, gdy siła oporu jest znacznie mniejsza niż waga ciała.

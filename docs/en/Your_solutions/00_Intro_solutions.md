@@ -1,4 +1,6 @@
-# Section 0: Introduction to Physics
+# Section 0: Introduction to Physics 
+
+Your personal intro notes go here...
 
 ## 1. Vector Algebra
 
@@ -12,7 +14,7 @@ c) The cross product $\vec{a} \times \vec{b}$.
 
 d) The angle between vectors $\vec{a}$ and $\vec{b}$.
 
-### Solution 1
+### Solution 1 - fix bad formatting rendered by github!!!
 
 a) The magnitude of a vector $\vec{v} = [v_x, v_y, v_z]$ is given by:
 $$|\vec{v}| = \sqrt{v_x^2 + v_y^2 + v_z^2}$$
@@ -25,8 +27,7 @@ b) The dot product of two vectors $\vec{a} = [a_x, a_y, a_z]$ and $\vec{b} = [b_
 $$\vec{a} \cdot \vec{b} = a_x b_x + a_y b_y + a_z b_z$$
 For $\vec{a}$ and $\vec{b}$:
 $$\vec{a} \cdot \vec{b} = (2)(4) + (1)(-2) + (-3)(1) = 8 - 2 - 3 = 3$$
-c) The cross product of two vectors $\vec{a} = [a_x, a
-_y, a_z]$ and $\vec{b} = [b_x, b_y, b_z]$ is calculated using the determinant of a matrix:
+c) The cross product of two vectors $\vec{a} = [a_x, a_y, a_z]$ and $\vec{b} = [b_x, b_y, b_z]$ is calculated using the determinant of a matrix:
 $$\vec{a} \times \vec{b} = \begin{vmatrix}
 \hat{i} & \hat{j} & \hat{k} \\
 a_x & a_y & a_z \\
@@ -56,21 +57,34 @@ Find the values of $x$ and $y$ that satisfy both equations: $2x + 3y = 12$ and $
 To solve the system of equations, we can use substitution or elimination. Here, we will use substitution.
 
 From the second equation, we can express $x$ in terms of $y$:
+
 $$x = y + 1$$
-Now we can substitute this expression for $x$ into the first equation:
+
+Now substitute this into the first equation:
+
 $$2(y + 1) + 3y = 12$$
-Expanding the equation:
+
+Expand:
+
 $$2y + 2 + 3y = 12$$
-Combining like terms:
+
+Combine like terms:
+
 $$5y + 2 = 12$$
-Subtracting 2 from both sides:
+
+Subtract 2 from both sides:
+
 $$5y = 10$$
-Dividing both sides by 5:
+
+Divide by 5:
+
 $$y = 2$$
-Now that we have the value of $y$, we can substitute it back into the expression for $x$:
-$$x = y + 1 = 2 + 1 = 3$$
-Thus, the solution to the system of equations is:
-$$x = 3, \quad y = 2$$
+
+Substitute back into $x = y + 1$:
+
+$$x = 2 + 1 = 3$$
+
+**Solution:** $x = 3, \quad y = 2$
 
 ## 3. Proportionality
 

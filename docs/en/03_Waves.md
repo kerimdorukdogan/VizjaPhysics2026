@@ -76,10 +76,9 @@ where $\vec{r_1}$ and $\vec{r_2}$ are the position vectors of the slits. The use
 
 Create an interactive HTML/JavaScript animation visualizing wave propagation in a discrete medium. The workspace should be filled with a grid of points ("atoms") that can transmit vibrations to their neighbors.
 
-Implement a mechanism where each excited point becomes a source of a new elementary (secondary) wave. The animation should allow for:
+Implement a mechanism where each excited point becomes a source of a new elementary (secondary) wave. The goal is to visually demonstrate how the superposition of partial waves forms a macroscopic wave front. The animation should allow for:
 
-* **Point excitation:** clicking on a single atom triggers a propagating spherical wave.
-* **Linear excitation:** simultaneously activating a row of atoms to observe how the summation of many elementary waves creates a plane wave front (envelope).
-* **Grid density regulation:** a slider allowing the user to change the density of atoms to verify how it affects the continuity and quality of the visible wave front.
+* *Point excitation:* clicking on a single atom triggers a propagating spherical wave.
+* *Linear excitation:* simultaneously activating a row of atoms to observe how the summation of many elementary waves creates a plane wave front (envelope).
+* *Grid density regulation:* a slider allowing the user to change the density of atoms to verify how it affects the continuity and quality of the visible wave front.
 
-The goal is to visually demonstrate how the superposition of partial waves forms a macroscopic wave front.

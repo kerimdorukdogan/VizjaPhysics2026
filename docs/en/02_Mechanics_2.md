@@ -107,4 +107,4 @@ Find the equation of motion of the ball, the time of flight to the highest point
 
 ## 17. Dynamics VII
 
-Solve the problem of projectile motion in a gravitational field when a resistance force proportional to velocity acts on the moving body. Find the equations of motion, the maximum height, and the time to reach it. Discuss the case when the resistance force is much smaller than the body's weight.
+Solve the problem of projectile motion in a gravitational field when a resistance force proportional to velocity acts on the moving body. Find the differential equations of motion for $x(t)$ and $y(x)$, solve them, then find the maximum height, and the time to reach it. Discuss the case when the resistance force is much smaller than the body's weight.
