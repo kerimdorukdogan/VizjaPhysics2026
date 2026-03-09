@@ -59,15 +59,55 @@ $$
 \vec{a} \cdot \vec{b} = a_x b_x + a_y b_y + a_z b_z
 $$
 
-### Cross product
+## 3️⃣ Cross Product
+
+The cross product is computed using the determinant:
 
 $$
 \vec{a} \times \vec{b} =
 \begin{vmatrix}
 i & j & k \\
-a_x & a_y & a_z \\
-b_x & b_y & b_z
+2 & 1 & -3 \\
+4 & -2 & 1
 \end{vmatrix}
+$$
+
+Now compute each component.
+
+### I component
+
+$$
+1 \cdot 1 - (-3)(-2)
+$$
+
+$$
+1 - 6 = -5
+$$
+
+### J component
+
+$$
+2 \cdot 1 - (-3)(4)
+$$
+
+$$
+2 + 12 = 14
+$$
+
+### K component
+
+$$
+2(-2) - 1(4)
+$$
+
+$$
+-4 - 4 = -8
+$$
+
+Therefore,
+
+$$
+\vec{a} \times \vec{b} = (-5,-14,-8)
 $$
 
 ---

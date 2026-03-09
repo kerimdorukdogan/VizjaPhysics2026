@@ -1,130 +1,285 @@
-# 🐜 Problem 10 — Infinite Series
+# 🌀 Problem 10 — Kinematics
 
-An ant starts at the origin and moves according to the pattern:
+The motion of a point \(M\) is given by:
 
-- \(1\) m east
-- \(1/2\) m north
-- \(1/3\) m west
-- \(1/4\) m south
-- \(1/5\) m east
-- and so on
+$$
+\vec{r}(t) = (a\cos(\omega t),\; b\sin(\omega t),\; bt)
+$$
 
-We want to determine the **final position** of the ant.
+where \(a\), \(b\), and \(\omega\) are positive constants.
+
+We want to determine:
+
+- the trajectory
+- the velocity vector
+- the path length from \(t=0\) to \(t=t_0\)
 
 ---
 
-## 📌 Step 1: Separate horizontal and vertical motion
+## 📌 Given
 
-The horizontal motion is:
+| Coordinate | Expression |
+|----------|------------|
+| \(x(t)\) | $a\cos(\omega t)$ |
+| \(y(t)\) | $b\sin(\omega t)$ |
+| \(z(t)\) | $bt$ |
 
-- east: positive \(x\)
-- west: negative \(x\)
+---
 
-So the \(x\)-coordinate is:
+## 📈 Motion Sketch
+
+```text
+              z
+              ↑
+              |
+              |        •
+              |      •
+              |    •
+              |  •
+              |•
+             / 
+            /     helical motion
+           /
+          +------------------------→ x
+         /
+        y
+```
+
+The point moves around the \(z\)-axis while also moving upward.  
+This produces a **helical trajectory**.
+
+---
+
+## 🧠 Key Concepts
+
+The \(x\) and \(y\) coordinates describe oscillatory motion:
 
 $$
-x = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots
+x = a\cos(\omega t)
 $$
 
-The vertical motion is:
+$$
+y = b\sin(\omega t)
+$$
 
-- north: positive \(y\)
-- south: negative \(y\)
-
-So the \(y\)-coordinate is:
+The \(z\) coordinate increases linearly:
 
 $$
-y = \frac{1}{2} - \frac{1}{4} + \frac{1}{6} - \frac{1}{8} + \cdots
+z = bt
+$$
+
+So the point rotates in the horizontal plane while steadily moving upward.
+
+Velocity is the derivative of position:
+
+$$
+\vec{v}(t) = \frac{d\vec{r}}{dt}
+$$
+
+The path length from \(0\) to \(t_0\) is:
+
+$$
+L = \int_0^{t_0} |\vec{v}(t)|\,dt
 $$
 
 ---
 
-## 🧠 Step 2: Recognize the series for the x-coordinate
+## 🔍 Step-by-Step Solution
 
-The series
+### 1️⃣ Find the trajectory in the \(xy\)-plane
 
-$$
-1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots
-$$
-
-is the well-known Gregory–Leibniz series:
+We start with:
 
 $$
-1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots = \frac{\pi}{4}
+x = a\cos(\omega t)
+$$
+
+$$
+y = b\sin(\omega t)
+$$
+
+Divide by constants:
+
+$$
+\frac{x}{a} = \cos(\omega t)
+$$
+
+$$
+\frac{y}{b} = \sin(\omega t)
+$$
+
+Now square both equations and add them:
+
+$$
+\left(\frac{x}{a}\right)^2 + \left(\frac{y}{b}\right)^2
+=
+\cos^2(\omega t) + \sin^2(\omega t)
+$$
+
+Since:
+
+$$
+\cos^2(\omega t) + \sin^2(\omega t) = 1
+$$
+
+we obtain:
+
+$$
+\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
+$$
+
+This is the equation of an **ellipse** in the \(xy\)-plane.
+
+Because \(z=bt\) increases with time, the full 3D trajectory is a **helix**.
+
+---
+
+### 2️⃣ Compute the velocity vector
+
+Differentiate each coordinate with respect to time.
+
+For the \(x\)-component:
+
+$$
+\frac{dx}{dt} = -a\omega \sin(\omega t)
+$$
+
+For the \(y\)-component:
+
+$$
+\frac{dy}{dt} = b\omega \cos(\omega t)
+$$
+
+For the \(z\)-component:
+
+$$
+\frac{dz}{dt} = b
 $$
 
 Therefore:
 
 $$
-x = \frac{\pi}{4}
+\vec{v}(t) =
+\left(
+-a\omega \sin(\omega t),\;
+b\omega \cos(\omega t),\;
+b
+\right)
 $$
 
 ---
 
-## 🧠 Step 3: Recognize the series for the y-coordinate
+### 3️⃣ Compute the speed
 
-We write:
-
-$$
-y = \frac{1}{2}\left(1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots\right)
-$$
-
-The alternating harmonic series is:
+The speed is the magnitude of the velocity vector:
 
 $$
-1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots = \ln 2
+|\vec{v}(t)|
+=
+\sqrt{
+\left(-a\omega \sin(\omega t)\right)^2
++
+\left(b\omega \cos(\omega t)\right)^2
++
+b^2
+}
+$$
+
+Simplify:
+
+$$
+|\vec{v}(t)|
+=
+\sqrt{
+a^2\omega^2\sin^2(\omega t)
++
+b^2\omega^2\cos^2(\omega t)
++
+b^2
+}
+$$
+
+---
+
+### 4️⃣ Compute the path length
+
+The path length from \(t=0\) to \(t=t_0\) is:
+
+$$
+L = \int_0^{t_0} |\vec{v}(t)|\,dt
 $$
 
 So:
 
 $$
-y = \frac{1}{2}\ln 2
+L
+=
+\int_0^{t_0}
+\sqrt{
+a^2\omega^2\sin^2(\omega t)
++
+b^2\omega^2\cos^2(\omega t)
++
+b^2
+}
+\,dt
 $$
+
+This is the required expression for the distance traveled.
 
 ---
 
-## 🔍 Step 4: Final position
+## 🎯 Final Results
 
-The final position of the ant is:
-
-$$
-\left(\frac{\pi}{4}, \frac{1}{2}\ln 2\right)
-$$
-
----
-
-## 🎯 Final Result
-
-$$
-x = \frac{\pi}{4}
-$$
-
-$$
-y = \frac{1}{2}\ln 2
-$$
-
-So the final position is:
-
-$$
-\boxed{\left(\frac{\pi}{4}, \frac{1}{2}\ln 2\right)}
-$$
+| Quantity | Result |
+|----------|--------|
+| Projection in the \(xy\)-plane | $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ |
+| 3D trajectory | Helix |
+| Velocity vector | $\left(-a\omega \sin(\omega t),\; b\omega \cos(\omega t),\; b\right)$ |
+| Path length | $\int_0^{t_0} |\vec{v}(t)|\,dt$ |
 
 ---
 
 ## 💡 Interpretation
 
-The motion converges because both coordinate sums are convergent alternating series.
+- In the \(xy\)-plane, the point moves along an **ellipse**.
+- At the same time, the \(z\)-coordinate grows linearly.
+- Combining circular/elliptic motion with vertical motion creates a **helical path**.
 
-- The horizontal position converges to:
+This is a standard example of **3D kinematics**.
+
+---
+
+## ✅ Final Answer
+
+The projection in the \((xy)\)-plane is:
 
 $$
-\frac{\pi}{4}
+\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
 $$
 
-- The vertical position converges to:
+The velocity vector is:
 
 $$
-\frac{1}{2}\ln 2
+\vec{v}(t) =
+\left(
+-a\omega \sin(\omega t),\;
+b\omega \cos(\omega t),\;
+b
+\right)
 $$
 
-So even though the ant makes infinitely many moves, its final position is finite.
+The path length from \(0\) to \(t_0\) is:
+
+$$
+L =
+\int_0^{t_0}
+\sqrt{
+a^2\omega^2\sin^2(\omega t)
++
+b^2\omega^2\cos^2(\omega t)
++
+b^2
+}
+\, dt
+$$
