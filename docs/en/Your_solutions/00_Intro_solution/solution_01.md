@@ -9,18 +9,38 @@ author: Kerim Doruk Doğan
 We are given two vectors in three-dimensional space.
 
 $$
-\vec{a} = (2,1,-3)
+\vec{a} = (2, 1, -3)
 $$
 
 $$
-\vec{b} = (4,-2,1)
+\vec{b} = (4, -2, 1)
 $$
 
 We want to determine:
 
-- the **magnitudes** of both vectors
-- the **dot product**
+- the **magnitudes** of both vectors  
+- the **dot product**  
 - the **cross product**
+
+---
+
+## 🧭 Vector Sketch
+
+This diagram illustrates the two vectors starting from the origin.
+
+```
+        y
+        ↑
+        |
+        |          b = (4,-2,1)
+        |
+--------O----------------------→ x
+       /
+      /
+     a = (2,1,-3)
+```
+
+The vectors **a** and **b** originate from the same point and extend in different directions in 3D space.
 
 ---
 
@@ -44,7 +64,8 @@ $$
 ### Dot product
 
 $$
-\vec{a} \cdot \vec{b} =
+\vec{a} \cdot \vec{b}
+=
 a_x b_x + a_y b_y + a_z b_z
 $$
 
@@ -126,6 +147,14 @@ i & j & k \\
 \end{vmatrix}
 $$
 
+Compute the determinant:
+
+$$
+i(1\cdot1 - (-3)(-2))
+- j(2\cdot1 - (-3)(4))
++ k(2(-2) - 1(4))
+$$
+
 $$
 = i(1 - 6) - j(2 + 12) + k(-4 - 4)
 $$
@@ -134,7 +163,7 @@ $$
 = -5i -14j -8k
 $$
 
-So:
+Therefore:
 
 $$
 \vec{a} \times \vec{b} = (-5,-14,-8)
@@ -155,4 +184,7 @@ $$
 
 # 💡 Interpretation
 
-The **dot product** measures how aligned two vectors are, while the **cross product** produces a vector perpendicular to both vectors. These operations are fundamental tools in vector algebra and physics calculations.
+The **dot product** measures how aligned two vectors are.  
+The **cross product** produces a vector that is **perpendicular to both vectors**.
+
+These vector operations are fundamental tools used in **physics, mechanics, and engineering calculations**.
