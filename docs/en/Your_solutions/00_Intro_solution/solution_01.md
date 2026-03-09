@@ -1,12 +1,6 @@
----
-title: Intro Problem 1 — Vector Algebra
-course: Physics Basics L8
-author: Kerim Doruk Doğan
----
-
 # 🚀 Problem 1 — Vector Algebra
 
-We are given two vectors in three-dimensional space.
+We are given two vectors in three-dimensional space:
 
 $$
 \vec{a} = (2, 1, -3)
@@ -18,42 +12,40 @@ $$
 
 We want to determine:
 
-- the **magnitudes** of both vectors  
-- the **dot product**  
+- the **magnitudes** of both vectors
+- the **dot product**
 - the **cross product**
 
 ---
 
 ## 🧭 Vector Sketch
 
-This diagram illustrates the two vectors starting from the origin.
+This simple sketch shows the idea of the two vectors starting from the origin.
 
-```
+```text
         y
         ↑
         |
-        |          b = (4,-2,1)
+        |          b = (4, -2, 1)
         |
 --------O----------------------→ x
        /
       /
-     a = (2,1,-3)
+     a = (2, 1, -3)
 ```
 
-The vectors **a** and **b** originate from the same point and extend in different directions in 3D space.
-
 ---
 
-# 📌 Given
+## 📌 Given
 
 | Vector | Components |
-|------|-------------|
-| **a** | (2, 1, −3) |
-| **b** | (4, −2, 1) |
+|--------|------------|
+| **a**  | (2, 1, -3) |
+| **b**  | (4, -2, 1) |
 
 ---
 
-# 🧠 Key Concepts
+## 🧠 Key Concepts
 
 ### Magnitude of a vector
 
@@ -64,16 +56,13 @@ $$
 ### Dot product
 
 $$
-\vec{a} \cdot \vec{b}
-=
-a_x b_x + a_y b_y + a_z b_z
+\vec{a} \cdot \vec{b} = a_x b_x + a_y b_y + a_z b_z
 $$
 
 ### Cross product
 
 $$
-\vec{a} \times \vec{b}
-=
+\vec{a} \times \vec{b} =
 \begin{vmatrix}
 i & j & k \\
 a_x & a_y & a_z \\
@@ -83,9 +72,9 @@ $$
 
 ---
 
-# 🔍 Step-by-Step Solution
+## 🔍 Step-by-Step Solution
 
-## 1️⃣ Magnitude of vector **a**
+### 1️⃣ Magnitude of vector **a**
 
 $$
 |\vec{a}| = \sqrt{2^2 + 1^2 + (-3)^2}
@@ -101,7 +90,7 @@ $$
 
 ---
 
-## 2️⃣ Magnitude of vector **b**
+### 2️⃣ Magnitude of vector **b**
 
 $$
 |\vec{b}| = \sqrt{4^2 + (-2)^2 + 1^2}
@@ -117,12 +106,10 @@ $$
 
 ---
 
-## 3️⃣ Dot Product
+### 3️⃣ Dot Product
 
 $$
-\vec{a} \cdot \vec{b}
-=
-(2)(4) + (1)(-2) + (-3)(1)
+\vec{a} \cdot \vec{b} = (2)(4) + (1)(-2) + (-3)(1)
 $$
 
 $$
@@ -135,11 +122,10 @@ $$
 
 ---
 
-## 4️⃣ Cross Product
+### 4️⃣ Cross Product
 
 $$
-\vec{a} \times \vec{b}
-=
+\vec{a} \times \vec{b} =
 \begin{vmatrix}
 i & j & k \\
 2 & 1 & -3 \\
@@ -150,7 +136,8 @@ $$
 Compute the determinant:
 
 $$
-i(1\cdot1 - (-3)(-2))
+\vec{a} \times \vec{b}
+= i(1\cdot1 - (-3)(-2))
 - j(2\cdot1 - (-3)(4))
 + k(2(-2) - 1(4))
 $$
@@ -160,31 +147,31 @@ $$
 $$
 
 $$
-= -5i -14j -8k
+= -5i - 14j - 8k
 $$
 
 Therefore:
 
 $$
-\vec{a} \times \vec{b} = (-5,-14,-8)
+\vec{a} \times \vec{b} = (-5, -14, -8)
 $$
 
 ---
 
-# 🎯 Final Results
+## 🎯 Final Results
 
 | Quantity | Result |
-|------|------|
+|----------|--------|
 | Magnitude of **a** | $\sqrt{14}$ |
 | Magnitude of **b** | $\sqrt{21}$ |
 | Dot product | $3$ |
-| Cross product | $(-5,-14,-8)$ |
+| Cross product | $(-5, -14, -8)$ |
 
 ---
 
-# 💡 Interpretation
+## 💡 Interpretation
 
-The **dot product** measures how aligned two vectors are.  
-The **cross product** produces a vector that is **perpendicular to both vectors**.
+The **dot product** tells us how much two vectors point in the same direction.  
+The **cross product** gives a vector that is **perpendicular to both vectors**.
 
-These vector operations are fundamental tools used in **physics, mechanics, and engineering calculations**.
+These operations are fundamental in **vector algebra, mechanics, and physics**.
