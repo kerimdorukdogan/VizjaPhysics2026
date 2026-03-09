@@ -1,28 +1,34 @@
-# 🌀 Problem 10 — Kinematics
+# Problem 10 — Kinematics
 
 The position of a point is
 
 $$
-\vec r(t) = (a\cos(\omega t),\; b\sin(\omega t),\; bt)
+\vec r(t) = (a \cos(\omega t),\; b \sin(\omega t),\; bt)
 $$
 
-where \(a,b,\omega\) are positive constants.
+where \(a\), \(b\), and \(\omega\) are positive constants.
+
+We want to find:
+
+- the trajectory
+- the velocity vector
+- the path length from \(t=0\) to \(t=t_0\)
 
 ---
 
-# 1️⃣ Trajectory
+## 1️⃣ Trajectory
 
-From the parametric equations
-
-$$
-x = a\cos(\omega t)
-$$
+From the parametric equations:
 
 $$
-y = b\sin(\omega t)
+x = a \cos(\omega t)
 $$
 
-Divide:
+$$
+y = b \sin(\omega t)
+$$
+
+Divide both equations:
 
 $$
 \frac{x}{a} = \cos(\omega t)
@@ -32,7 +38,7 @@ $$
 \frac{y}{b} = \sin(\omega t)
 $$
 
-Square both equations and add them:
+Now square and add:
 
 $$
 \left(\frac{x}{a}\right)^2 + \left(\frac{y}{b}\right)^2
@@ -40,7 +46,7 @@ $$
 \cos^2(\omega t) + \sin^2(\omega t)
 $$
 
-Using the trigonometric identity
+Using the identity
 
 $$
 \cos^2(\omega t) + \sin^2(\omega t) = 1
@@ -52,7 +58,7 @@ $$
 \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
 $$
 
-Therefore the projection in the \(xy\)-plane is an **ellipse**.
+So the projection in the \(xy\)-plane is an ellipse.
 
 Since
 
@@ -60,29 +66,23 @@ $$
 z = bt
 $$
 
-increases linearly with time, the full trajectory is a **helix**.
+increases linearly with time, the full 3D trajectory is a helix.
 
 ---
 
-# 2️⃣ Velocity Vector
+## 2️⃣ Velocity vector
 
 Velocity is the derivative of position.
 
-Differentiate each component.
-
-### x-component
+Differentiate each component:
 
 $$
-\frac{dx}{dt} = -a\omega\sin(\omega t)
+\frac{dx}{dt} = -a\omega \sin(\omega t)
 $$
 
-### y-component
-
 $$
-\frac{dy}{dt} = b\omega\cos(\omega t)
+\frac{dy}{dt} = b\omega \cos(\omega t)
 $$
-
-### z-component
 
 $$
 \frac{dz}{dt} = b
@@ -91,31 +91,17 @@ $$
 Therefore
 
 $$
-\vec v(t) =
-(-a\omega\sin(\omega t),\; b\omega\cos(\omega t),\; b)
+\vec v(t) = \bigl(-a\omega \sin(\omega t),\; b\omega \cos(\omega t),\; b\bigr)
 $$
 
 ---
 
-# 3️⃣ Speed
+## 3️⃣ Speed
 
-The magnitude of velocity is
-
-$$
-|\vec v(t)|
-=
-\sqrt{
-(-a\omega\sin(\omega t))^2 +
-(b\omega\cos(\omega t))^2 +
-b^2
-}
-$$
-
-Simplify:
+The speed is the magnitude of the velocity vector:
 
 $$
-|\vec v(t)|
-=
+|\vec v(t)| =
 \sqrt{
 a^2\omega^2\sin^2(\omega t)
 +
@@ -127,7 +113,7 @@ $$
 
 ---
 
-# 4️⃣ Path Length
+## 4️⃣ Path length
 
 The path length from \(0\) to \(t_0\) is
 
@@ -140,17 +126,40 @@ a^2\omega^2\sin^2(\omega t)
 b^2\omega^2\cos^2(\omega t)
 +
 b^2
-}\, dt
+}
+\, dt
 $$
 
 ---
 
-# 🎯 Final Results
+## 🎯 Final Results
 
-| Quantity | Result |
-|--------|--------|
-| Projection in xy-plane | ellipse |
-| Equation | \(x^2/a^2 + y^2/b^2 = 1\) |
-| 3D trajectory | helix |
-| Velocity | \((-a\omega\sin(\omega t), b\omega\cos(\omega t), b)\) |
-| Path length | integral above |
+- Projection in the \(xy\)-plane: ellipse
+- Equation of projection:
+
+$$
+\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
+$$
+
+- 3D trajectory: helix
+
+- Velocity vector:
+
+$$
+\vec v(t) = \bigl(-a\omega \sin(\omega t),\; b\omega \cos(\omega t),\; b\bigr)
+$$
+
+- Path length:
+
+$$
+L =
+\int_0^{t_0}
+\sqrt{
+a^2\omega^2\sin^2(\omega t)
++
+b^2\omega^2\cos^2(\omega t)
++
+b^2
+}
+\, dt
+$$
