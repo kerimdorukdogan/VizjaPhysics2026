@@ -1,123 +1,74 @@
-# 🌍 Problem 3 – Proportionality (Gravitational Law)
+# 📐 Problem 3 — Proportionality
 
-We analyze how the gravitational force changes when the **distance and masses change**.
+We consider Newton's law of gravitation:
+
+$$
+F = G \frac{m_1 m_2}{r^2}
+$$
+
+We want to determine how the force changes if:
+
+- the distance **doubles**
+- both masses are **halved**
 
 ---
 
-# 📌 Given formula
+## 📌 Given
 
-The **Universal Law of Gravitation**:
-
-$$
-F = \frac{G m_1 m_2}{r^2}
-$$
-
-Where:
-
-- \(F\) → gravitational force  
-- \(G\) → gravitational constant  
-- \(m_1, m_2\) → masses  
-- \(r\) → distance between objects  
-
----
-
-# 🔄 Step 1: Apply the changes
-
-According to the problem:
-
-Distance becomes:
+Original force:
 
 $$
-r' = 2r
+F = G \frac{m_1 m_2}{r^2}
 $$
 
-Masses become half:
+New conditions:
 
 $$
 m_1' = \frac{m_1}{2}, \quad m_2' = \frac{m_2}{2}
 $$
 
----
-
-# ✏️ Step 2: Substitute into the formula
-
-New force:
-
 $$
-F' = \frac{G \left(\frac{m_1}{2}\right)\left(\frac{m_2}{2}\right)}{(2r)^2}
+r' = 2r
 $$
 
 ---
 
-# 🔍 Step 3: Simplify the expression
+## 🔍 Step-by-Step Solution
 
-Multiply masses:
+Insert the new values into the formula:
 
 $$
-\frac{m_1}{2} \cdot \frac{m_2}{2} = \frac{m_1 m_2}{4}
+F' = G \frac{(m_1/2)(m_2/2)}{(2r)^2}
 $$
 
-Square the distance:
+Simplify numerator:
+
+$$
+(m_1/2)(m_2/2) = \frac{m_1 m_2}{4}
+$$
+
+Simplify denominator:
 
 $$
 (2r)^2 = 4r^2
 $$
 
-So the equation becomes:
+So:
 
 $$
-F' = \frac{G \cdot \frac{m_1 m_2}{4}}{4r^2}
+F' = G \frac{m_1 m_2 / 4}{4r^2}
 $$
 
----
-
-# 🧩 Step 4: Simplify
-
 $$
-F' = \frac{G m_1 m_2}{16 r^2}
-$$
-
-Compare with the original force:
-
-$$
-F = \frac{G m_1 m_2}{r^2}
+F' = \frac{1}{16} G \frac{m_1 m_2}{r^2}
 $$
 
 ---
 
-# ✅ Final Result
+## 🎯 Final Result
 
 $$
 F' = \frac{F}{16}
 $$
 
-🎯 The gravitational force becomes **16 times smaller**.
-
----
-
-# 💡 Interpretation
-
-Two effects happen:
-
-- Distance doubled → force becomes **4 times smaller**
-- Masses halved → force becomes **4 times smaller**
-
-Together:
-
-$$
-4 \times 4 = 16
-$$
-
-So the force decreases by a factor of **16**.
-
----
-
-# 🚀 Final Answer
-
-The new force is:
-
-$$
-F' = \frac{1}{16}F
-$$
-
-✔ The gravitational force becomes **sixteen times smaller**.
+The new gravitational force is **16 times smaller**.
