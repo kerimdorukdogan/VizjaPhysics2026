@@ -252,7 +252,7 @@ This is a standard example of **3D kinematics**.
 
 ## ✅ Final Answer
 
-The projection in the \(xy\)-plane is:
+The projection in the \((xy)\)-plane is:
 
 $$
 \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
@@ -272,8 +272,7 @@ $$
 The path length from \(0\) to \(t_0\) is:
 
 $$
-L
-=
+L =
 \int_0^{t_0}
 \sqrt{
 a^2\omega^2\sin^2(\omega t)
@@ -282,5 +281,5 @@ b^2\omega^2\cos^2(\omega t)
 +
 b^2
 }
-\,dt
+\, dt
 $$
