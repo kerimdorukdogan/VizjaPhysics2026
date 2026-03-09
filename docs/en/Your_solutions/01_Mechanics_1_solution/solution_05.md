@@ -174,6 +174,7 @@ $$
 ## 💡 Interpretation
 
 The river pushes the boat toward the east.  
+
 To cancel this effect, the boat must aim slightly **upstream**, meaning slightly **west of north**.
 
 This way, the resultant motion is exactly straight across the river.

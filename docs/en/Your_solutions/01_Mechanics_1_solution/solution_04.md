@@ -93,4 +93,5 @@ $$
 ## 💡 Interpretation
 
 The object has a **time-dependent velocity**, but its acceleration is **constant**.  
+
 It accelerates positively in the \(x\)-direction and negatively in the \(y\)-direction.
