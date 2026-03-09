@@ -1,6 +1,6 @@
-# 🧮 Problem 4 – Vector Calculus
+# 🧮 Problem 4 — Vector Calculus
 
-The position of the object is given by:
+The position of an object is given by:
 
 $$
 \vec{r}(t) = (3t^2)\,\hat{i} + (5t - 8t^2)\,\hat{j}
@@ -8,120 +8,89 @@ $$
 
 We want to find:
 
-- the **velocity vector** \( \vec{v}(t) \)
-- the **acceleration vector** \( \vec{a}(t) \)
+- the velocity vector
+- the acceleration vector
 
 as functions of time.
 
 ---
 
-# 📌 Step 1: Recall the definitions
-
-Velocity is the derivative of position with respect to time:
-
-$$
-\vec{v}(t) = \frac{d\vec{r}(t)}{dt}
-$$
-
-Acceleration is the derivative of velocity:
-
-$$
-\vec{a}(t) = \frac{d\vec{v}(t)}{dt}
-$$
-
----
-
-# 🔍 Step 2: Differentiate the position vector
-
-Given:
+## 📌 Given
 
 $$
 \vec{r}(t) = (3t^2)\,\hat{i} + (5t - 8t^2)\,\hat{j}
 $$
 
-Differentiate each component separately.
+---
 
-For the \( \hat{i} \)-component:
+## 🧠 Key Concepts
 
-$$
-\frac{d}{dt}(3t^2) = 6t
-$$
-
-For the \( \hat{j} \)-component:
+Velocity is the derivative of position:
 
 $$
-\frac{d}{dt}(5t - 8t^2) = 5 - 16t
+\vec{v}(t)=\frac{d\vec{r}}{dt}
 $$
 
-So the velocity vector is:
+Acceleration is the derivative of velocity:
 
 $$
-\vec{v}(t) = 6t\,\hat{i} + (5 - 16t)\,\hat{j}
+\vec{a}(t)=\frac{d\vec{v}}{dt}
 $$
 
 ---
 
-# ✏️ Step 3: Differentiate again to get acceleration
+## 🔍 Step-by-Step Solution
 
-Now differentiate the velocity vector:
+### 1️⃣ Velocity vector
 
-$$
-\vec{v}(t) = 6t\,\hat{i} + (5 - 16t)\,\hat{j}
-$$
-
-For the \( \hat{i} \)-component:
+Differentiate each component:
 
 $$
-\frac{d}{dt}(6t) = 6
+\frac{d}{dt}(3t^2)=6t
 $$
 
-For the \( \hat{j} \)-component:
-
 $$
-\frac{d}{dt}(5 - 16t) = -16
+\frac{d}{dt}(5t-8t^2)=5-16t
 $$
 
-So the acceleration vector is:
+So:
 
 $$
-\vec{a}(t) = 6\,\hat{i} - 16\,\hat{j}
+\vec{v}(t)=6t\,\hat{i} + (5-16t)\,\hat{j}
 $$
 
 ---
 
-# ✅ Final Result
+### 2️⃣ Acceleration vector
 
-The velocity vector is:
-
-$$
-\vec{v}(t) = 6t\,\hat{i} + (5 - 16t)\,\hat{j}
-$$
-
-The acceleration vector is:
+Differentiate the velocity components:
 
 $$
-\vec{a}(t) = 6\,\hat{i} - 16\,\hat{j}
+\frac{d}{dt}(6t)=6
+$$
+
+$$
+\frac{d}{dt}(5-16t)=-16
+$$
+
+So:
+
+$$
+\vec{a}(t)=6\,\hat{i}-16\,\hat{j}
 $$
 
 ---
 
-# 💡 Interpretation
+## 🎯 Final Results
 
-- The velocity changes with time in both directions
-- The acceleration is constant
-- The object accelerates positively in the \(x\)-direction
-- The object accelerates negatively in the \(y\)-direction
-
-✔ This is a standard vector differentiation problem.
+| Quantity | Result |
+|----------|--------|
+| Velocity | $6t\,\hat{i} + (5-16t)\,\hat{j}$ |
+| Acceleration | $6\,\hat{i} -16\,\hat{j}$ |
 
 ---
 
-# 🚀 Final Answer
+## 💡 Interpretation
 
-$$
-\boxed{\vec{v}(t) = 6t\,\hat{i} + (5 - 16t)\,\hat{j}}
-$$
-
-$$
-\boxed{\vec{a}(t) = 6\,\hat{i} - 16\,\hat{j}}
-$$
+The object has a **time-dependent velocity**, but its acceleration is **constant**.  
+It accelerates positively in the \(x\)-direction and negatively in the \(y\)-direction.

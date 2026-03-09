@@ -146,3 +146,10 @@ and
 $$
 \boxed{R_{\max} = \frac{v_0^2}{g}}
 $$
+
+---
+
+## 💡 Interpretation
+
+The projectile range is greatest when the launch angle balances horizontal and vertical motion perfectly.  
+That balance occurs at:

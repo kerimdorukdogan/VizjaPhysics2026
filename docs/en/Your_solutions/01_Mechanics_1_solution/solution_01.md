@@ -1,78 +1,129 @@
-# 🚀 Problem 1 – Projectile Motion
+# 🚀 Problem 1 — Projectile Motion
 
-A projectile is fired from the ground with initial velocity:
+A projectile is fired from the ground with initial speed
 
 $$
 v_0 = 100 \text{ m/s}
 $$
 
-at angle:
+at an angle
 
 $$
 \theta = 37^\circ
 $$
 
-We assume **no air resistance**.
+above the horizontal. We assume **no air resistance**.
 
-We want to find:
+We want to determine:
 
-- the differential equations of motion
+- the differential equations of motion in the horizontal and vertical directions
 - the time of flight
 - the maximum height
 - the range
 
 ---
 
-# 📌 Step 1: Resolve the initial velocity into components
+## 📌 Given
 
-Horizontal component:
+| Quantity | Value |
+|----------|-------|
+| Initial speed | $100\ \text{m/s}$ |
+| Launch angle | $37^\circ$ |
+| Gravity | $g = 9.81\ \text{m/s}^2$ |
+
+---
+
+## 📈 Trajectory Sketch
+
+```text
+                    •
+                 •
+              •
+           •
+        •
+     •
+  •
+•------------------------------------------→ x
+ \ 37°
+  \
+   \
+    ↗ initial velocity
+```
+
+The projectile follows a **parabolic path**:
+- horizontal motion is uniform
+- vertical motion is affected by gravity
+
+---
+
+## 🧠 Key Concepts
+
+### Initial velocity components
 
 $$
 v_{0x} = v_0 \cos\theta
 $$
 
-Vertical component:
-
 $$
 v_{0y} = v_0 \sin\theta
 $$
 
-Substitute the values:
+### Differential equations of motion
+
+Horizontal direction:
 
 $$
-v_{0x} = 100\cos 37^\circ
+\frac{d^2x}{dt^2} = 0
+$$
+
+Vertical direction:
+
+$$
+\frac{d^2y}{dt^2} = -g
+$$
+
+---
+
+## 🔍 Step-by-Step Solution
+
+### 1️⃣ Resolve the initial velocity into components
+
+$$
+v_{0x} = 100 \cos 37^\circ
 $$
 
 $$
-v_{0y} = 100\sin 37^\circ
+v_{0y} = 100 \sin 37^\circ
 $$
 
 Using approximate values:
 
 $$
-\cos 37^\circ \approx 0.8, \qquad \sin 37^\circ \approx 0.6
+\cos 37^\circ \approx 0.7986
+\qquad
+\sin 37^\circ \approx 0.6018
 $$
 
 So:
 
 $$
-v_{0x} \approx 80 \text{ m/s}
+v_{0x} \approx 79.86\ \text{m/s}
 $$
 
 $$
-v_{0y} \approx 60 \text{ m/s}
+v_{0y} \approx 60.18\ \text{m/s}
 $$
 
 ---
 
-# 🧭 Step 2: Write the differential equations of motion
+### 2️⃣ Write the equations of motion
 
-In projectile motion without air resistance:
+Since there is no air resistance:
 
-- horizontal acceleration is zero
-- vertical acceleration is due to gravity
+- the horizontal acceleration is zero
+- the vertical acceleration is \(-g\)
 
-So:
+Therefore:
 
 $$
 \frac{d^2x}{dt^2} = 0
@@ -82,13 +133,7 @@ $$
 \frac{d^2y}{dt^2} = -g
 $$
 
-where:
-
-$$
-g = 9.81 \text{ m/s}^2
-$$
-
-From these, the velocity components are:
+Integrating once gives the velocity components:
 
 $$
 \frac{dx}{dt} = v_{0x}
@@ -98,7 +143,7 @@ $$
 \frac{dy}{dt} = v_{0y} - gt
 $$
 
-And the position equations are:
+Integrating again gives the position equations:
 
 $$
 x(t) = v_{0x} t
@@ -108,21 +153,21 @@ $$
 y(t) = v_{0y} t - \frac{1}{2}gt^2
 $$
 
-So approximately:
+So numerically:
 
 $$
-x(t) = 80t
+x(t) \approx 79.86 t
 $$
 
 $$
-y(t) = 60t - 4.905t^2
+y(t) \approx 60.18 t - 4.905 t^2
 $$
 
 ---
 
-# ⏱️ Step 3: Determine the time of flight
+### 3️⃣ Determine the time of flight
 
-The projectile returns to the ground when:
+The projectile lands when:
 
 $$
 y(t) = 0
@@ -131,34 +176,30 @@ $$
 So:
 
 $$
-60t - 4.905t^2 = 0
+60.18 t - 4.905 t^2 = 0
 $$
 
 Factor out \(t\):
 
 $$
-t(60 - 4.905t) = 0
+t(60.18 - 4.905 t) = 0
 $$
 
-Thus:
+Ignoring the trivial solution \(t=0\), we get:
 
 $$
-t = 0
-\quad \text{or} \quad
-t = \frac{60}{4.905}
+T = \frac{60.18}{4.905}
 $$
 
-So the total time of flight is:
-
 $$
-T \approx 12.23 \text{ s}
+T \approx 12.27\ \text{s}
 $$
 
 ---
 
-# 📈 Step 4: Determine the maximum height
+### 4️⃣ Determine the maximum height
 
-At the highest point, vertical velocity becomes zero:
+At the highest point, the vertical velocity is zero:
 
 $$
 v_y = v_{0y} - gt = 0
@@ -167,121 +208,85 @@ $$
 So:
 
 $$
-60 - 9.81t = 0
+60.18 - 9.81 t = 0
 $$
 
 $$
-t = \frac{60}{9.81} \approx 6.12 \text{ s}
+t = \frac{60.18}{9.81} \approx 6.13\ \text{s}
 $$
 
-Now substitute this into \(y(t)\):
-
-$$
-H_{\max} = 60(6.12) - 4.905(6.12)^2
-$$
-
-$$
-H_{\max} \approx 183.5 \text{ m}
-$$
-
-We can also use the standard formula:
+Now use the formula for maximum height:
 
 $$
 H_{\max} = \frac{v_{0y}^2}{2g}
 $$
 
 $$
-H_{\max} = \frac{60^2}{2 \cdot 9.81}
-= \frac{3600}{19.62}
-\approx 183.5 \text{ m}
+H_{\max} = \frac{(60.18)^2}{2 \cdot 9.81}
+$$
+
+$$
+H_{\max} \approx 184.6\ \text{m}
 $$
 
 ---
 
-# 📏 Step 5: Determine the range
+### 5️⃣ Determine the range
 
-The range is:
+The horizontal distance traveled is:
 
 $$
 R = v_{0x} \cdot T
 $$
 
-So:
-
 $$
-R = 80 \cdot 12.23
+R \approx 79.86 \times 12.27
 $$
 
 $$
-R \approx 978.4 \text{ m}
+R \approx 979.8\ \text{m}
 $$
-
-We can also use:
-
-$$
-R = \frac{v_0^2 \sin(2\theta)}{g}
-$$
-
-which gives approximately the same result.
 
 ---
 
-# ✅ Final Results
+## 🎯 Final Results
 
-Differential equations:
+| Quantity | Result |
+|----------|--------|
+| Differential equation in \(x\) | $\frac{d^2x}{dt^2}=0$ |
+| Differential equation in \(y\) | $\frac{d^2y}{dt^2}=-g$ |
+| Time of flight | $12.27\ \text{s}$ |
+| Maximum height | $184.6\ \text{m}$ |
+| Range | $979.8\ \text{m}$ |
+
+---
+
+## 💡 Interpretation
+
+This is a standard projectile motion problem.
+
+- The **horizontal motion** is uniform because no horizontal force acts on the projectile.
+- The **vertical motion** is uniformly accelerated downward because of gravity.
+- Together, these two motions produce a **parabolic trajectory**.
+
+---
+
+## ✅ Final Answer
 
 $$
 \frac{d^2x}{dt^2} = 0
-$$
-
-$$
+\qquad
 \frac{d^2y}{dt^2} = -g
 $$
 
-Time of flight:
-
 $$
-T \approx 12.23 \text{ s}
-$$
-
-Maximum height:
-
-$$
-H_{\max} \approx 183.5 \text{ m}
-$$
-
-Range:
-
-$$
-R \approx 978.4 \text{ m}
-$$
-
----
-
-# 💡 Interpretation
-
-- The horizontal motion is uniform because there is no horizontal acceleration
-- The vertical motion is uniformly accelerated downward because of gravity
-- The projectile rises, slows down vertically, reaches a peak, and then falls back down
-
-✔ This is a standard 2D projectile motion problem.
-
----
-
-# 🚀 Final Answer
-
-$$
-\boxed{\frac{d^2x}{dt^2}=0,\qquad \frac{d^2y}{dt^2}=-g}
+T \approx 12.27\ \text{s}
 $$
 
 $$
-\boxed{T \approx 12.23 \text{ s}}
+H_{\max} \approx 184.6\ \text{m}
 $$
 
 $$
-\boxed{H_{\max} \approx 183.5 \text{ m}}
-$$
-
-$$
-\boxed{R \approx 978.4 \text{ m}}
+R \approx 979.8\ \text{m}
 $$

@@ -1,6 +1,6 @@
-# 🌀 Problem 10 – Kinematics
+# 🌀 Problem 10 — Kinematics
 
-A point moves according to:
+The motion of a point \(M\) is given by:
 
 $$
 \vec{r}(t) = (a\cos(\omega t),\; b\sin(\omega t),\; bt)
@@ -8,114 +8,200 @@ $$
 
 where \(a\), \(b\), and \(\omega\) are positive constants.
 
-We want to:
+We want to determine:
 
-- find the trajectory equation
-- compute the path length from \(t=0\) to \(t=t_0\)
-- describe the trajectory and special cases
-
----
-
-# 📌 Step 1: Write the coordinate equations
-
-From the vector form:
-
-$$
-x(t) = a\cos(\omega t)
-$$
-
-$$
-y(t) = b\sin(\omega t)
-$$
-
-$$
-z(t) = bt
-$$
+- the trajectory
+- the velocity vector
+- the path length from \(t=0\) to \(t=t_0\)
 
 ---
 
-# 🔍 Step 2: Find the trajectory equation in the \(xy\)-plane
+## 📌 Given
 
-We eliminate \(t\) between \(x\) and \(y\).
+| Coordinate | Expression |
+|----------|------------|
+| \(x(t)\) | $a\cos(\omega t)$ |
+| \(y(t)\) | $b\sin(\omega t)$ |
+| \(z(t)\) | $bt$ |
 
-From:
+---
+
+## 📈 Motion Sketch
+
+```text
+              z
+              ↑
+              |
+              |        •
+              |      •
+              |    •
+              |  •
+              |•
+             / 
+            /     helical motion
+           /
+          +------------------------→ x
+         /
+        y
+```
+
+The point moves around the \(z\)-axis while also moving upward.  
+This produces a **helical trajectory**.
+
+---
+
+## 🧠 Key Concepts
+
+The \(x\) and \(y\) coordinates describe oscillatory motion:
 
 $$
 x = a\cos(\omega t)
-\quad\Rightarrow\quad
-\frac{x}{a} = \cos(\omega t)
 $$
-
-From:
 
 $$
 y = b\sin(\omega t)
-\quad\Rightarrow\quad
-\frac{y}{b} = \sin(\omega t)
 $$
 
-Now use:
-
-$$
-\cos^2(\omega t) + \sin^2(\omega t) = 1
-$$
-
-So:
-
-$$
-\left(\frac{x}{a}\right)^2 + \left(\frac{y}{b}\right)^2 = 1
-$$
-
-This means that the projection in the \(xy\)-plane is an ellipse.
-
-Since:
+The \(z\) coordinate increases linearly:
 
 $$
 z = bt
 $$
 
-increases linearly with time, the full trajectory is an **elliptical helix**.
+So the point rotates in the horizontal plane while steadily moving upward.
 
----
-
-# ✏️ Step 3: Compute the velocity vector
-
-Differentiate \(\vec{r}(t)\):
+Velocity is the derivative of position:
 
 $$
 \vec{v}(t) = \frac{d\vec{r}}{dt}
 $$
 
-So:
+The path length from \(0\) to \(t_0\) is:
+
+$$
+L = \int_0^{t_0} |\vec{v}(t)|\,dt
+$$
+
+---
+
+## 🔍 Step-by-Step Solution
+
+### 1️⃣ Find the trajectory in the \(xy\)-plane
+
+We start with:
+
+$$
+x = a\cos(\omega t)
+$$
+
+$$
+y = b\sin(\omega t)
+$$
+
+Divide by constants:
+
+$$
+\frac{x}{a} = \cos(\omega t)
+$$
+
+$$
+\frac{y}{b} = \sin(\omega t)
+$$
+
+Now square both equations and add them:
+
+$$
+\left(\frac{x}{a}\right)^2 + \left(\frac{y}{b}\right)^2
+=
+\cos^2(\omega t) + \sin^2(\omega t)
+$$
+
+Since:
+
+$$
+\cos^2(\omega t) + \sin^2(\omega t) = 1
+$$
+
+we obtain:
+
+$$
+\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
+$$
+
+This is the equation of an **ellipse** in the \(xy\)-plane.
+
+Because \(z=bt\) increases with time, the full 3D trajectory is a **helix**.
+
+---
+
+### 2️⃣ Compute the velocity vector
+
+Differentiate each coordinate with respect to time.
+
+For the \(x\)-component:
+
+$$
+\frac{dx}{dt} = -a\omega \sin(\omega t)
+$$
+
+For the \(y\)-component:
+
+$$
+\frac{dy}{dt} = b\omega \cos(\omega t)
+$$
+
+For the \(z\)-component:
+
+$$
+\frac{dz}{dt} = b
+$$
+
+Therefore:
 
 $$
 \vec{v}(t) =
-(-a\omega \sin(\omega t),\; b\omega \cos(\omega t),\; b)
+\left(
+-a\omega \sin(\omega t),\;
+b\omega \cos(\omega t),\;
+b
+\right)
 $$
 
 ---
 
-# 📏 Step 4: Compute the speed
+### 3️⃣ Compute the speed
 
-The speed is the magnitude of velocity:
-
-$$
-|\vec{v}(t)| =
-\sqrt{(-a\omega \sin(\omega t))^2 + (b\omega \cos(\omega t))^2 + b^2}
-$$
-
-So:
+The speed is the magnitude of the velocity vector:
 
 $$
-|\vec{v}(t)| =
-\sqrt{a^2\omega^2 \sin^2(\omega t) + b^2\omega^2 \cos^2(\omega t) + b^2}
+|\vec{v}(t)|
+=
+\sqrt{
+\left(-a\omega \sin(\omega t)\right)^2
++
+\left(b\omega \cos(\omega t)\right)^2
++
+b^2
+}
 $$
 
-This is the general speed formula.
+Simplify:
+
+$$
+|\vec{v}(t)|
+=
+\sqrt{
+a^2\omega^2\sin^2(\omega t)
++
+b^2\omega^2\cos^2(\omega t)
++
+b^2
+}
+$$
 
 ---
 
-# 🧮 Step 5: Compute the path length
+### 4️⃣ Compute the path length
 
 The path length from \(t=0\) to \(t=t_0\) is:
 
@@ -123,113 +209,78 @@ $$
 L = \int_0^{t_0} |\vec{v}(t)|\,dt
 $$
 
-Therefore:
+So:
 
 $$
-\boxed{
-L =
+L
+=
 \int_0^{t_0}
-\sqrt{a^2\omega^2 \sin^2(\omega t) + b^2\omega^2 \cos^2(\omega t) + b^2}\, dt
+\sqrt{
+a^2\omega^2\sin^2(\omega t)
++
+b^2\omega^2\cos^2(\omega t)
++
+b^2
 }
+\,dt
 $$
 
-This is the exact arc-length expression.
+This is the required expression for the distance traveled.
 
 ---
 
-# 💡 Step 6: Special case \(a=b\)
+## 🎯 Final Results
 
-If:
-
-$$
-a=b
-$$
-
-then the ellipse becomes a circle, and the trajectory becomes a **circular helix**.
-
-In that case the speed simplifies to:
-
-$$
-|\vec{v}(t)| =
-\sqrt{a^2\omega^2(\sin^2(\omega t)+\cos^2(\omega t)) + b^2}
-$$
-
-Since:
-
-$$
-\sin^2(\omega t)+\cos^2(\omega t)=1
-$$
-
-we get:
-
-$$
-|\vec{v}(t)| = \sqrt{a^2\omega^2 + b^2}
-$$
-
-which is constant.
-
-So the path length becomes:
-
-$$
-L = \sqrt{a^2\omega^2 + b^2}\; t_0
-$$
+| Quantity | Result |
+|----------|--------|
+| Projection in the \(xy\)-plane | $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ |
+| 3D trajectory | Helix |
+| Velocity vector | $\left(-a\omega \sin(\omega t),\; b\omega \cos(\omega t),\; b\right)$ |
+| Path length | $\int_0^{t_0} |\vec{v}(t)|\,dt$ |
 
 ---
 
-# ✅ Final Results
+## 💡 Interpretation
 
-Trajectory in the \(xy\)-plane:
+- In the \(xy\)-plane, the point moves along an **ellipse**.
+- At the same time, the \(z\)-coordinate grows linearly.
+- Combining circular/elliptic motion with vertical motion creates a **helical path**.
 
-$$
-\boxed{\left(\frac{x}{a}\right)^2 + \left(\frac{y}{b}\right)^2 = 1}
-$$
-
-Full trajectory:
-
-$$
-\boxed{\text{elliptical helix}}
-$$
-
-Velocity vector:
-
-$$
-\boxed{
-\vec{v}(t)=(-a\omega \sin(\omega t),\; b\omega \cos(\omega t),\; b)
-}
-$$
-
-Path length:
-
-$$
-\boxed{
-L =
-\int_0^{t_0}
-\sqrt{a^2\omega^2 \sin^2(\omega t) + b^2\omega^2 \cos^2(\omega t) + b^2}\, dt
-}
-$$
-
-Special case \(a=b\):
-
-$$
-\boxed{L = \sqrt{a^2\omega^2 + b^2}\; t_0}
-$$
+This is a standard example of **3D kinematics**.
 
 ---
 
-# 🚀 Final Answer
+## ✅ Final Answer
 
-The point moves on an **elliptical helix** with projection:
-
-$$
-\boxed{\left(\frac{x}{a}\right)^2 + \left(\frac{y}{b}\right)^2 = 1}
-$$
-
-and the general path length is:
+The projection in the \(xy\)-plane is:
 
 $$
-\boxed{
-L =
+\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
+$$
+
+The velocity vector is:
+
+$$
+\vec{v}(t) =
+\left(
+-a\omega \sin(\omega t),\;
+b\omega \cos(\omega t),\;
+b
+\right)
+$$
+
+The path length from \(0\) to \(t_0\) is:
+
+$$
+L
+=
 \int_0^{t_0}
-\sqrt{a^2\omega^2 \sin^2(\omega t) + b^2\omega^2 \cos^2(\omega t) + b^2}\, dt
+\sqrt{
+a^2\omega^2\sin^2(\omega t)
++
+b^2\omega^2\cos^2(\omega t)
++
+b^2
 }
+\,dt
 $$

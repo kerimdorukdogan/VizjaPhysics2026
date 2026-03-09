@@ -1,180 +1,136 @@
-# ⏳ Problem 6 – Variable Velocity
+# ⏳ Problem 6 — Variable Velocity
 
-The velocity of the object is given by:
+The velocity is given by:
 
 $$
 v(t) = t^2 + 2t - 5
 $$
 
-We also know that at time:
+We also know that:
 
 $$
-t = 0
-$$
-
-the position is:
-
-$$
-x(0) = 4
+x(0)=4
 $$
 
 We want to find:
 
-- the **position** at \( t = 3 \)
-- the **acceleration** at \( t = 3 \)
+- the position at \(t=3\)
+- the acceleration at \(t=3\)
 
 ---
 
-# 📌 Step 1: Find the position function
+## 📌 Given
+
+$$
+v(t)=t^2+2t-5
+$$
+
+$$
+x(0)=4
+$$
+
+---
+
+## 🧠 Key Concepts
 
 Velocity is the derivative of position:
 
 $$
-v(t) = \frac{dx}{dt}
+v(t)=\frac{dx}{dt}
 $$
 
-So:
-
-$$
-\frac{dx}{dt} = t^2 + 2t - 5
-$$
-
-To find position, integrate:
-
-$$
-x(t) = \int (t^2 + 2t - 5)\,dt
-$$
-
-$$
-x(t) = \frac{t^3}{3} + t^2 - 5t + C
-$$
-
----
-
-# 🔍 Step 2: Use the initial condition
-
-We know:
-
-$$
-x(0) = 4
-$$
-
-Substitute \( t = 0 \):
-
-$$
-4 = \frac{0^3}{3} + 0^2 - 5(0) + C
-$$
-
-$$
-4 = C
-$$
-
-So the position function is:
-
-$$
-x(t) = \frac{t^3}{3} + t^2 - 5t + 4
-$$
-
----
-
-# ✏️ Step 3: Find the position at \( t = 3 \)
-
-Substitute \( t = 3 \):
-
-$$
-x(3) = \frac{3^3}{3} + 3^2 - 5(3) + 4
-$$
-
-$$
-x(3) = \frac{27}{3} + 9 - 15 + 4
-$$
-
-$$
-x(3) = 9 + 9 - 15 + 4
-$$
-
-$$
-x(3) = 7
-$$
-
-So the position at \( t = 3 \) is:
-
-$$
-x(3) = 7
-$$
-
----
-
-# 🧮 Step 4: Find the acceleration
+So position is found by integration.
 
 Acceleration is the derivative of velocity:
 
 $$
-a(t) = \frac{dv}{dt}
-$$
-
-Given:
-
-$$
-v(t) = t^2 + 2t - 5
-$$
-
-Differentiate:
-
-$$
-a(t) = 2t + 2
-$$
-
-Now substitute \( t = 3 \):
-
-$$
-a(3) = 2(3) + 2
-$$
-
-$$
-a(3) = 6 + 2 = 8
-$$
-
-So:
-
-$$
-a(3) = 8
+a(t)=\frac{dv}{dt}
 $$
 
 ---
 
-# ✅ Final Results
+## 🔍 Step-by-Step Solution
 
-Position at \( t = 3 \):
+### 1️⃣ Find the position function
 
-$$
-x(3) = 7
-$$
-
-Acceleration at \( t = 3 \):
+Integrate the velocity:
 
 $$
-a(3) = 8
+x(t)=\int (t^2+2t-5)\,dt
+$$
+
+$$
+x(t)=\frac{t^3}{3}+t^2-5t+C
+$$
+
+Use the initial condition \(x(0)=4\):
+
+$$
+4 = 0+0-0+C
+$$
+
+$$
+C=4
+$$
+
+Therefore:
+
+$$
+x(t)=\frac{t^3}{3}+t^2-5t+4
 $$
 
 ---
 
-# 💡 Interpretation
+### 2️⃣ Find the position at \(t=3\)
 
-- The velocity changes with time, so the motion is **not uniform**
-- By integrating velocity, we get the position
-- By differentiating velocity, we get the acceleration
+$$
+x(3)=\frac{3^3}{3}+3^2-5(3)+4
+$$
 
-✔ This is a standard relation between position, velocity, and acceleration.
+$$
+x(3)=\frac{27}{3}+9-15+4
+$$
+
+$$
+x(3)=9+9-15+4
+$$
+
+$$
+x(3)=7
+$$
 
 ---
 
-# 🚀 Final Answer
+### 3️⃣ Find the acceleration
+
+Differentiate the velocity:
 
 $$
-\boxed{x(3) = 7}
+a(t)=\frac{d}{dt}(t^2+2t-5)
 $$
 
 $$
-\boxed{a(3) = 8}
+a(t)=2t+2
 $$
+
+At \(t=3\):
+
+$$
+a(3)=2(3)+2=8
+$$
+
+---
+
+## 🎯 Final Results
+
+| Quantity | Result |
+|----------|--------|
+| Position at \(t=3\) | $7$ |
+| Acceleration at \(t=3\) | $8$ |
+
+---
+
+## 💡 Interpretation
+
+The motion is **non-uniform**, because the velocity changes with time.  
+The position is found by integrating the velocity, while the acceleration comes from differentiating it.

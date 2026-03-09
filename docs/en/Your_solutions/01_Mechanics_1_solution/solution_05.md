@@ -1,49 +1,96 @@
-# 🚣 Problem 5 – Relative Velocity
+# 🚣 Problem 5 — Relative Velocity
 
-A river flows **east at 2 m/s**.  
-A boat can travel **5 m/s in still water**.
+A river flows east with speed
 
-The boat wants to go **directly north across the river**.
+$$
+2 \text{ m/s}
+$$
 
-The river is **200 meters wide**.
+A boat can travel at
+
+$$
+5 \text{ m/s}
+$$
+
+in still water.
+
+The boat wants to go **directly north** across the river.
+
+The river is
+
+$$
+200 \text{ m}
+$$
+
+wide.
 
 We want to determine:
 
-- the direction (angle) the boat must head
+- the direction the boat should head
 - the time needed to cross the river
 
 ---
 
-# 📌 Step 1: Understand the velocity vectors
+## 📌 Given
 
-We have two velocities:
-
-River velocity:
-
-$$
-v_r = 2 \text{ m/s (east)}
-$$
-
-Boat velocity relative to water:
-
-$$
-v_b = 5 \text{ m/s}
-$$
-
-To go **directly north**, the east component of the boat must cancel the river flow.
+| Quantity | Value |
+|----------|-------|
+| River speed | $2\ \text{m/s}$ east |
+| Boat speed in still water | $5\ \text{m/s}$ |
+| River width | $200\ \text{m}$ |
 
 ---
 
-# 🔍 Step 2: Cancel the river velocity
+## 🧭 Velocity Sketch
 
-The boat must aim slightly **west of north**.
+```text
+                 North
+                   ↑
+                   |
+                   |   Resultant motion
+                   |   straight across
+                   |
+Boat heading        ↖
+(against current)    \
+                       \
+------------------------+------------------------→ East
+                        \
+                         \ River current = 2 m/s
+                          →
+```
 
-Let \( \theta \) be the angle west of north.
+The boat must aim slightly **west of north** so that its westward component cancels the river current.
 
-The east-west component of the boat velocity must satisfy:
+---
+
+## 🧠 Key Concepts
+
+To move directly north, the horizontal component of the boat's velocity must cancel the eastward river flow.
+
+Let \(\theta\) be the angle **west of north**.
+
+Then:
 
 $$
-5 \sin\theta = 2
+5\sin\theta = 2
+$$
+
+The northward component of the boat's velocity is:
+
+$$
+v_n = 5\cos\theta
+$$
+
+---
+
+## 🔍 Step-by-Step Solution
+
+### 1️⃣ Find the heading angle
+
+We use the condition that the westward component must balance the river current:
+
+$$
+5\sin\theta = 2
 $$
 
 So:
@@ -53,14 +100,14 @@ $$
 $$
 
 $$
-\theta = \sin^{-1}(0.4)
+\theta = \sin^{-1}\left(\frac{2}{5}\right)
 $$
 
 $$
 \theta \approx 23.6^\circ
 $$
 
-So the boat must aim:
+So the boat must head:
 
 $$
 23.6^\circ \text{ west of north}
@@ -68,44 +115,38 @@ $$
 
 ---
 
-# ⏱️ Step 3: Find the northward speed
+### 2️⃣ Find the northward speed
 
-The north component of velocity is:
+The northward component is:
 
 $$
-v_n = 5 \cos\theta
+v_n = 5\cos\theta
 $$
 
 Using:
 
 $$
-\cos 23.6^\circ \approx 0.917
+\cos 23.6^\circ \approx 0.9165
 $$
 
-So:
+we get:
 
 $$
-v_n \approx 5 \times 0.917
+v_n \approx 5(0.9165)
 $$
 
 $$
-v_n \approx 4.58 \text{ m/s}
+v_n \approx 4.58\ \text{m/s}
 $$
 
 ---
 
-# 🧮 Step 4: Compute the crossing time
+### 3️⃣ Compute the crossing time
 
-Distance across the river:
-
-$$
-d = 200 \text{ m}
-$$
-
-Time:
+The time to cross is:
 
 $$
-t = \frac{d}{v}
+t = \frac{\text{distance}}{\text{speed}}
 $$
 
 So:
@@ -115,47 +156,40 @@ t = \frac{200}{4.58}
 $$
 
 $$
-t \approx 43.7 \text{ s}
+t \approx 43.7\ \text{s}
 $$
 
 ---
 
-# ✅ Final Results
+## 🎯 Final Results
 
-Direction the boat must aim:
-
-$$
-\theta \approx 23.6^\circ
-$$
-
-west of north.
-
-Time to cross the river:
-
-$$
-t \approx 43.7 \text{ s}
-$$
+| Quantity | Result |
+|----------|--------|
+| Heading angle | $23.6^\circ$ west of north |
+| Northward speed | $4.58\ \text{m/s}$ |
+| Crossing time | $43.7\ \text{s}$ |
 
 ---
 
-# 💡 Interpretation
+## 💡 Interpretation
 
-- The boat aims slightly **upstream (west)** to cancel the river flow.
-- This keeps the final motion **straight north**.
-- Only the north component determines the crossing time.
+The river pushes the boat toward the east.  
+To cancel this effect, the boat must aim slightly **upstream**, meaning slightly **west of north**.
+
+This way, the resultant motion is exactly straight across the river.
 
 ---
 
-# 🚀 Final Answer
+## ✅ Final Answer
 
-Angle:
-
-$$
-\boxed{23.6^\circ \text{ west of north}}
-$$
-
-Time to cross:
+The boat should head:
 
 $$
-\boxed{43.7 \text{ s}}
+23.6^\circ \text{ west of north}
+$$
+
+and the crossing time is:
+
+$$
+43.7\ \text{s}
 $$
