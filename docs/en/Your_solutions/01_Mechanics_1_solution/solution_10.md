@@ -1,4 +1,4 @@
-# Problem 10 — Kinematics
+# 🌀 Problem 10 — Kinematics
 
 The position of a point is
 
@@ -41,8 +41,7 @@ $$
 Now square and add:
 
 $$
-\left(\frac{x}{a}\right)^2 + \left(\frac{y}{b}\right)^2
-=
+\frac{x^2}{a^2} + \frac{y^2}{b^2} =
 \cos^2(\omega t) + \sin^2(\omega t)
 $$
 
