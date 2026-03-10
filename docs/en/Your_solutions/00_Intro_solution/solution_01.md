@@ -178,14 +178,16 @@ $$
 Expanding along the first row:
 
 $$
+\begin{aligned}
 \vec{a} \times \vec{b}
-=
-i(1 - 6) - j(2 + 12) + k(-4 - 4)
-=
--5i - 14j - 8k
+&= i(1\cdot1 - (-3)(-2)) \\
+&\quad - j(2\cdot1 - (-3)(4)) \\
+&\quad + k(2(-2) - 1(4)) \\
+&= -5i - 14j - 8k
+\end{aligned}
 $$
 
-Therefore,
+Therefore:
 
 $$
 \vec{a} \times \vec{b} = (-5,-14,-8)
