@@ -164,7 +164,7 @@ $$
 
 ### 4️⃣ Cross Product
 
-The cross product is computed using the determinant form:
+We compute the cross product using the determinant:
 
 $$
 \vec{a} \times \vec{b} =
@@ -175,7 +175,7 @@ i & j & k \\
 \end{vmatrix}
 $$
 
-We expand the determinant along the first row.
+Expanding the determinant:
 
 $$
 \vec{a} \times \vec{b}
@@ -185,17 +185,21 @@ i(1\cdot1 - (-3)(-2))
 + k(2(-2) - 1(4))
 $$
 
-Now simplify each term:
+Simplify:
 
 $$
-= i(1 - 6) - j(2 + 12) + k(-4 - 4)
+\vec{a} \times \vec{b}
+=
+i(1 - 6) - j(2 + 12) + k(-4 - 4)
 $$
 
 $$
-= -5i - 14j - 8k
+\vec{a} \times \vec{b}
+=
+-5i - 14j - 8k
 $$
 
-Therefore,
+Therefore:
 
 $$
 \vec{a} \times \vec{b} = (-5,-14,-8)
