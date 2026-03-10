@@ -1,184 +1,292 @@
-# 🚀 Problem 1 — Vector Algebra
+# 🚀 Problem 1 — Projectile Motion
 
-We are given two vectors in three-dimensional space:
-
-$$
-\vec{a} = (2,1,-3)
-$$
+A projectile is fired from the ground with initial speed
 
 $$
-\vec{b} = (4,-2,1)
+v_0 = 100 \text{ m/s}
 $$
 
-We calculate:
+at an angle
 
-- magnitude of both vectors
-- dot product
-- cross product
-- angle between the vectors
+$$
+\theta = 37^\circ
+$$
+
+above the horizontal. We assume **no air resistance**.
+
+We want to determine:
+
+- the differential equations of motion in the horizontal and vertical directions
+- the time of flight
+- the maximum height
+- the range
 
 ---
 
-# 📌 1. Magnitude of vectors
+## 📌 Given
 
-Magnitude formula:
-
-$$
-|\vec{v}|=\sqrt{x^2+y^2+z^2}
-$$
-
-### Vector a
-
-$$
-|\vec a|=\sqrt{2^2+1^2+(-3)^2}
-$$
-
-$$
-|\vec a|=\sqrt{4+1+9}
-$$
-
-$$
-|\vec a|=\sqrt{14}
-$$
-
-### Vector b
-
-$$
-|\vec b|=\sqrt{4^2+(-2)^2+1^2}
-$$
-
-$$
-|\vec b|=\sqrt{16+4+1}
-$$
-
-$$
-|\vec b|=\sqrt{21}
-$$
+| Quantity | Value |
+|----------|-------|
+| Initial speed | $100\ \text{m/s}$ |
+| Launch angle | $37^\circ$ |
+| Gravity | $g = 9.81\ \text{m/s}^2$ |
 
 ---
 
-# 📌 2. Dot Product
+## 📈 Trajectory Sketch
 
-Formula:
+```text
+                    •
+                 •
+              •
+           •
+        •
+     •
+  •
+•------------------------------------------→ x
+ \ 37°
+  \
+   \
+    ↗ initial velocity
+```
 
-$$
-\vec a \cdot \vec b
-=
-a_x b_x + a_y b_y + a_z b_z
-$$
-
-Compute:
-
-$$
-(2)(4)+(1)(-2)+(-3)(1)
-$$
-
-$$
-8-2-3
-$$
-
-$$
-=3
-$$
+The projectile follows a **parabolic path**:
+- horizontal motion is uniform
+- vertical motion is affected by gravity
 
 ---
 
-# 📌 3. Cross Product
+## 🧠 Key Concepts
 
-Using determinant form:
-
-$$
-\vec a \times \vec b
-=
-\begin{vmatrix}
-i & j & k \\
-2 & 1 & -3 \\
-4 & -2 & 1
-\end{vmatrix}
-$$
-
-Compute components:
-
-### i component
+### Initial velocity components
 
 $$
-1\cdot1 - (-3)(-2)
-=
-1-6
-=
--5
+v_{0x} = v_0 \cos\theta
 $$
 
-### j component
-
 $$
-2\cdot1 - (-3)(4)
-=
-2+12
-=
-14
+v_{0y} = v_0 \sin\theta
 $$
 
-### k component
+### Differential equations of motion
+
+Horizontal direction:
 
 $$
-2(-2) - 1(4)
-=
--4-4
-=
--8
+\frac{d^2x}{dt^2} = 0
 $$
 
-Result:
+Vertical direction:
 
 $$
-\vec a \times \vec b =
-(-5,-14,-8)
+\frac{d^2y}{dt^2} = -g
 $$
 
 ---
 
-# 📌 4. Angle Between Vectors
+## 🔍 Step-by-Step Solution
 
-Formula:
-
-$$
-\cos\theta =
-\frac{\vec a \cdot \vec b}{|\vec a||\vec b|}
-$$
-
-Substitute values:
+### 1️⃣ Resolve the initial velocity into components
 
 $$
-\cos\theta =
-\frac{3}{\sqrt{14}\sqrt{21}}
+v_{0x} = 100 \cos 37^\circ
 $$
 
 $$
-\cos\theta =
-\frac{3}{\sqrt{294}}
+v_{0y} = 100 \sin 37^\circ
 $$
 
-Angle:
+Using approximate values:
 
 $$
-\theta = \cos^{-1}\left(\frac{3}{\sqrt{294}}\right)
+\cos 37^\circ \approx 0.7986
+\qquad
+\sin 37^\circ \approx 0.6018
 $$
 
-Numerically:
+So:
 
 $$
-\theta \approx 79.9^\circ
+v_{0x} \approx 79.86\ \text{m/s}
+$$
+
+$$
+v_{0y} \approx 60.18\ \text{m/s}
 $$
 
 ---
 
-# 🎯 Final Results
+### 2️⃣ Write the equations of motion
+
+Since there is no air resistance:
+
+- the horizontal acceleration is zero
+- the vertical acceleration is \(-g\)
+
+Therefore:
+
+$$
+\frac{d^2x}{dt^2} = 0
+$$
+
+$$
+\frac{d^2y}{dt^2} = -g
+$$
+
+Integrating once gives the velocity components:
+
+$$
+\frac{dx}{dt} = v_{0x}
+$$
+
+$$
+\frac{dy}{dt} = v_{0y} - gt
+$$
+
+Integrating again gives the position equations:
+
+$$
+x(t) = v_{0x} t
+$$
+
+$$
+y(t) = v_{0y} t - \frac{1}{2}gt^2
+$$
+
+So numerically:
+
+$$
+x(t) \approx 79.86 t
+$$
+
+$$
+y(t) \approx 60.18 t - 4.905 t^2
+$$
+
+---
+
+### 3️⃣ Determine the time of flight
+
+The projectile lands when:
+
+$$
+y(t) = 0
+$$
+
+So:
+
+$$
+60.18 t - 4.905 t^2 = 0
+$$
+
+Factor out \(t\):
+
+$$
+t(60.18 - 4.905 t) = 0
+$$
+
+Ignoring the trivial solution \(t=0\), we get:
+
+$$
+T = \frac{60.18}{4.905}
+$$
+
+$$
+T \approx 12.27\ \text{s}
+$$
+
+---
+
+### 4️⃣ Determine the maximum height
+
+At the highest point, the vertical velocity is zero:
+
+$$
+v_y = v_{0y} - gt = 0
+$$
+
+So:
+
+$$
+60.18 - 9.81 t = 0
+$$
+
+$$
+t = \frac{60.18}{9.81} \approx 6.13\ \text{s}
+$$
+
+Now use the formula for maximum height:
+
+$$
+H_{\max} = \frac{v_{0y}^2}{2g}
+$$
+
+$$
+H_{\max} = \frac{(60.18)^2}{2 \cdot 9.81}
+$$
+
+$$
+H_{\max} \approx 184.6\ \text{m}
+$$
+
+---
+
+### 5️⃣ Determine the range
+
+The horizontal distance traveled is:
+
+$$
+R = v_{0x} \cdot T
+$$
+
+$$
+R \approx 79.86 \times 12.27
+$$
+
+$$
+R \approx 979.8\ \text{m}
+$$
+
+---
+
+## 🎯 Final Results
 
 | Quantity | Result |
-|------|------|
-| Magnitude of a | √14 |
-| Magnitude of b | √21 |
-| Dot product | 3 |
-| Cross product | (-5, -14, -8) |
-| Angle between vectors | ≈ 79.9° |
+|----------|--------|
+| Differential equation in \(x\) | $\frac{d^2x}{dt^2}=0$ |
+| Differential equation in \(y\) | $\frac{d^2y}{dt^2}=-g$ |
+| Time of flight | $12.27\ \text{s}$ |
+| Maximum height | $184.6\ \text{m}$ |
+| Range | $979.8\ \text{m}$ |
+
+---
+
+## 💡 Interpretation
+
+This is a standard projectile motion problem.
+
+- The **horizontal motion** is uniform because no horizontal force acts on the projectile.
+- The **vertical motion** is uniformly accelerated downward because of gravity.
+- Together, these two motions produce a **parabolic trajectory**.
+
+---
+
+## ✅ Final Answer
+
+$$
+\frac{d^2x}{dt^2} = 0
+\qquad
+\frac{d^2y}{dt^2} = -g
+$$
+
+$$
+T \approx 12.27\ \text{s}
+$$
+
+$$
+H_{\max} \approx 184.6\ \text{m}
+$$
+
+$$
+R \approx 979.8\ \text{m}
+$$

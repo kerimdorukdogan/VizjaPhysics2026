@@ -1,121 +1,157 @@
-# 🧲 Problem 9 – Vector Derivatives
+# 📦 Problem 9 — Optimization Problem
 
-We are given the position vector:
+A rectangle is under the curve
 
 $$
-\vec{r}(t) = (3t^2,\; 2t,\; 5)
+y = 3 - x^2
 $$
 
-We want to find:
+in the first quadrant.
 
-- the **velocity vector** \( \vec{v}(t) \)
-- the **acceleration vector** \( \vec{a}(t) \)
+We want to find the dimensions of the rectangle with the **maximum area**.
 
 ---
 
-# 📌 Step 1: Find the velocity vector
+## 📌 Step 1: Describe the rectangle
 
-Velocity is the derivative of position with respect to time:
-
-$$
-\vec{v}(t) = \frac{d\vec{r}(t)}{dt}
-$$
-
-Differentiate each component separately:
+Let the upper-right corner of the rectangle be at the point
 
 $$
-\vec{r}(t) = (3t^2,\; 2t,\; 5)
+(x,y)
 $$
 
-So:
+on the curve
 
 $$
-\frac{d}{dt}(3t^2) = 6t
+y = 3 - x^2
+$$
+
+Since the rectangle is in the first quadrant:
+
+- width = \(x\)
+- height = \(y = 3 - x^2\)
+
+So the area is
+
+$$
+A(x) = x(3 - x^2)
 $$
 
 $$
-\frac{d}{dt}(2t) = 2
-$$
-
-$$
-\frac{d}{dt}(5) = 0
-$$
-
-Therefore:
-
-$$
-\vec{v}(t) = (6t,\; 2,\; 0)
+A(x) = 3x - x^3
 $$
 
 ---
 
-# 🔍 Step 2: Find the acceleration vector
+## 🔍 Step 2: Differentiate the area function
 
-Acceleration is the derivative of velocity with respect to time:
-
-$$
-\vec{a}(t) = \frac{d\vec{v}(t)}{dt}
-$$
-
-Differentiate each component of \( \vec{v}(t) \):
+To maximize the area, compute the derivative:
 
 $$
-\vec{v}(t) = (6t,\; 2,\; 0)
-$$
-
-So:
-
-$$
-\frac{d}{dt}(6t) = 6
+A'(x) = \frac{d}{dx}(3x - x^3)
 $$
 
 $$
-\frac{d}{dt}(2) = 0
+A'(x) = 3 - 3x^2
+$$
+
+Set the derivative equal to zero:
+
+$$
+3 - 3x^2 = 0
 $$
 
 $$
-\frac{d}{dt}(0) = 0
+1 - x^2 = 0
 $$
 
-Therefore:
+$$
+x^2 = 1
+$$
+
+Since we are in the first quadrant:
 
 $$
-\vec{a}(t) = (6,\; 0,\; 0)
+x = 1
 $$
 
 ---
 
-# ✅ Final Result
+## ✏️ Step 3: Find the corresponding height
 
-The velocity vector is:
-
-$$
-\vec{v}(t) = (6t,\; 2,\; 0)
-$$
-
-The acceleration vector is:
+Substitute \(x = 1\) into the curve:
 
 $$
-\vec{a}(t) = (6,\; 0,\; 0)
+y = 3 - x^2
+$$
+
+$$
+y = 3 - 1^2
+$$
+
+$$
+y = 2
 $$
 
 ---
 
-# 💡 Interpretation
+## ✅ Step 4: Verify it is a maximum
 
-- The object moves with changing speed in the **x-direction**
-- It has constant velocity in the **y-direction**
-- It has no motion in the **z-direction**
-- The acceleration is constant and points only along the **x-axis**
+Second derivative:
+
+$$
+A''(x) = -6x
+$$
+
+At \(x = 1\):
+
+$$
+A''(1) = -6 < 0
+$$
+
+So the area is indeed **maximum** at \(x=1\).
 
 ---
 
-# 🚀 Final Answer
+## 🎯 Final Result
+
+The rectangle with maximum area has:
+
+- width:
 
 $$
-\boxed{\vec{v}(t) = (6t,\; 2,\; 0)}
+x = 1
 $$
 
+- height:
+
 $$
-\boxed{\vec{a}(t) = (6,\; 0,\; 0)}
+y = 2
+$$
+
+So the dimensions are:
+
+$$
+\boxed{1 \times 2}
+$$
+
+The maximum area is:
+
+$$
+A_{\max} = 1 \cdot 2 = 2
+$$
+
+---
+
+## 💡 Interpretation
+
+The area depends on the balance between width and height.
+
+- If the rectangle is too wide, the height becomes small.
+- If it is too narrow, the width is too small.
+
+The optimal balance occurs at:
+
+$$
+x = 1,\quad y = 2
 $$
